@@ -4,7 +4,7 @@ import particlesConfig from "../config/ParticleConfig";
 
 export default function ParticleBackground() {
   return (
-    <div style={{ position: "absolute" }}>
+    <div>
       <Particles height="100vh" width="100vw" params={particlesConfig} />
     </div>
   );
