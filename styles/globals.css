@@ -1,0 +1,21 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+@layer base {
+  .cursive {
+    font-family: "Cedarville Cursive", cursive;
+  }
+
+  .home-name {
+    @apply text-6xl;
+    font-size: 150px;
+    font-family: "Amatic SC", cursive;
+    font-weight: 600;
+  }
+}
