@@ -4,8 +4,8 @@
     "name": "studio"
   },
   "api": {
-    "projectId": "znwy5ci9",
-    "dataset": "studio"
+    "projectId": "8lzb5fj3",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

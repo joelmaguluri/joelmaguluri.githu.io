@@ -25,5 +25,9 @@
     "react": "^17.0",
     "react-dom": "^17.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joelmaguluri/joelmaguluri.github.io.git"
+  }
 }

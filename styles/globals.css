@@ -11,9 +11,7 @@
   .cursive {
     font-family: "Cedarville Cursive", cursive;
   }
-  /* .prose img {
-    @apply ml-auto mr-auto border-1;
-  } */
+
   .home-name {
     @apply text-6xl;
     font-size: 150px;
