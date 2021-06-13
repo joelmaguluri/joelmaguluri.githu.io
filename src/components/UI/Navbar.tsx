@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import { SocialIcon } from 'react-social-icons';
+import Link from "next/link";
+import { FunctionComponentElement } from "react";
+import { SocialIcon } from "react-social-icons";
 
 function Navbar() {
     return (
@@ -22,4 +23,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
