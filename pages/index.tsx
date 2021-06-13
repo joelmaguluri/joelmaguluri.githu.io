@@ -7,11 +7,6 @@ export default function Home(): FunctionComponent {
     <div>
       <Navbar />
       <MainArea />
-<<<<<<< HEAD
-    </>
-  )
-=======
     </div>
   );
->>>>>>> 20f36a7c803a334042b992c8ae4575d7ca00a3bf
 }
