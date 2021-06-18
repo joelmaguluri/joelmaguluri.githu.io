@@ -6,6 +6,7 @@ type MainImage = {
     asset: {
         _id: string;
         url: string;
+        alt?: string;
     }
 }
 
