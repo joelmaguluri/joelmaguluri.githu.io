@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SocialIcon } from "react-social-icons";
+import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'
 
 function Navbar() {
     return (
@@ -11,10 +11,16 @@ function Navbar() {
                     <Link href="/projects"><a className="inline-flex text-center py-3 px-3 text-steel-blue-200 hover:text-steel-blue-800 my-6 rounded">Projects</a></Link>
                     <Link href="/about"><a className="inline-flex text-center py-3 px-3 text-steel-blue-200 hover:text-steel-blue-800 my-6 rounded">About Me!</a></Link>
                 </nav>
-                <div className="inline-flex my-6 px-3 py-3">
-                    <SocialIcon url="https://twitter.com/sudeepjoel" fgColor="#fff" className="mr-4" style={{ width: 35, height: 35 }} />
-                    <SocialIcon url="https://www.instagram.com/joel_maguluri/" fgColor="#fff" className="mr-4" style={{ width: 35, height: 35 }} />
-                    <SocialIcon url="https://www.linkedin.com/in/msudeepjoel/" fgColor="#fff" className="mr-4" style={{ width: 35, height: 35 }} />
+                <div className="flex my-6 px-3 py-3 items-center space-x-4">
+                    <div>
+                        <FaTwitter className="  text-white cursor-pointer " size='25px' />
+                    </div>
+                    <div>
+                        <FaInstagram className=" text-white cursor-pointer" size='25px' />
+                    </div>
+                    <div>
+                        <FaLinkedin className=" text-white cursor-pointer" size='25px' />
+                    </div>
                 </div>
             </div>
 

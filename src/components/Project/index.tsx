@@ -2,9 +2,27 @@ import { useEffect, useState } from "react"
 import sanityClient from "../../utils/sanityclient"
 import Link from "next/link";
 
+type Project = {
+    date: string;
+    description: string;
+    link: string;
+    place: string;
+    projectType: string;
+    tags: string[];
+    title: string;
+}
+
+// date: "2021-06-13T06:03:00.000Z"
+// description: "This is new Project That I have done "
+// link: "https://github.com/"
+// place: "Hyderabad"
+// projectType: "personal"
+// tags: (2) ["reactjs", "javascript"]
+// title: "My New Project"
+
 
 function Project() {
-    const [projectData, setProjectData] = useState(null);
+    const [projectData, setProjectData] = useState([]);
     useEffect(() => {
         sanityClient
             .fetch(
@@ -18,7 +36,11 @@ function Project() {
                     tags,
         }`
             )
-            .then((data) => setProjectData(data))
+            .then((data) => {
+
+                console.log(data)
+                setProjectData(data)
+            })
             .catch(console.error)
     }, [])
 
@@ -30,7 +52,7 @@ function Project() {
             </h2>
 
             <section className="grid grid-cols-2 gap-8">
-                {projectData && projectData.map((project, index) => (
+                {projectData && projectData.map((project: Project, index) => (
                     <article className="relative rounded-lg shadow-xl bg-white p-16">
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-steel-blue-7001">
                             <Link

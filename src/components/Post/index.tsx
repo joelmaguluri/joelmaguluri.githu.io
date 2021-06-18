@@ -2,8 +2,28 @@ import { useEffect, useState } from "react"
 import sanityClient from "../../utils/sanityclient"
 import Link from "next/link";
 
+type MainImage = {
+    asset: {
+        _id: string;
+        url: string;
+    }
+}
+
+type Slug = {
+    _type: string;
+    current: string;
+
+}
+
+type PostData = {
+    title: string;
+    mainImage: MainImage;
+    slug: Slug;
+}
+
+
 function Post() {
-    const [postData, setPostData] = useState(null);
+    const [postData, setPostData] = useState([]);
     useEffect(() => {
         sanityClient
             .fetch(
@@ -19,7 +39,10 @@ function Post() {
           }
         }`
             )
-            .then((data) => setPostData(data))
+            .then((data) => {
+                console.log(typeof data)
+                setPostData(data)
+            })
             .catch(console.error)
     }, [])
     console.log(postData)
@@ -31,7 +54,7 @@ function Post() {
                     Welcome to My Blog
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {postData && postData.map((post, index) =>
+                    {postData && postData.map((post: PostData, index) =>
                         <article>
                             <Link href={`/posts/${post.slug.current}`} >
                                 <span className="block h-64 relative rounded shadow-sm leading-snug bg-white border-l-8 border-steel-blue-400 ">
